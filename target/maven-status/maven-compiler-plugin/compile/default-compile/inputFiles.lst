@@ -1,0 +1,6 @@
+/home/joaomarcos11/ws/fiap-soat/hackaton/mail-sender/src/main/java/org/jfm/Main.java
+/home/joaomarcos11/ws/fiap-soat/hackaton/mail-sender/src/main/java/org/jfm/application/EmailService.java
+/home/joaomarcos11/ws/fiap-soat/hackaton/mail-sender/src/main/java/org/jfm/application/SqsConsumerService.java
+/home/joaomarcos11/ws/fiap-soat/hackaton/mail-sender/src/main/java/org/jfm/config/SqsConfig.java
+/home/joaomarcos11/ws/fiap-soat/hackaton/mail-sender/src/main/java/org/jfm/infrastructure/SqsClientProducer.java
+/home/joaomarcos11/ws/fiap-soat/hackaton/mail-sender/src/main/java/org/jfm/presentation/SqsScheduler.java

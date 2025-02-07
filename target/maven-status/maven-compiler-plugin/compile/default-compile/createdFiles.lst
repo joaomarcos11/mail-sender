@@ -1,0 +1,6 @@
+org/jfm/config/SqsConfig.class
+org/jfm/application/SqsConsumerService.class
+org/jfm/presentation/SqsScheduler.class
+org/jfm/Main.class
+org/jfm/application/EmailService.class
+org/jfm/infrastructure/SqsClientProducer.class
