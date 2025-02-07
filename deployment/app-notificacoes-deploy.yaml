@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-notificacoes-deploy
+spec:
+  selector:
+    matchLabels:
+      app: fiapx-notificacoes
+  template:
+    metadata:
+      labels:
+        app: fiapx-notificacoes
+    spec:
+      containers:
+        - name: fiapx-notificacoes
+          image: DOCKER_IMAGE
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: app-notificacoes-cm
+          resources:
+            requests:
+              cpu: 200m
