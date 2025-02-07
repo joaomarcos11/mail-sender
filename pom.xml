@@ -170,6 +170,7 @@
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>
+                    <useFile>false</useFile>
                 </configuration>
             </plugin>
             <plugin>
