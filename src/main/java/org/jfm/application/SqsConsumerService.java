@@ -37,7 +37,7 @@ public class SqsConsumerService {
 
         for (Message message : messages) {
             try {
-                Log.info("Mensagem: " + message);
+                System.out.println("Mensagem: " + message);
                 String[] parts = message.body().split("\\.", 2);
                 if (parts.length == 2) {
                     String videoId = parts[0];
