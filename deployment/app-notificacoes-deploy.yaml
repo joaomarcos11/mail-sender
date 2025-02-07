@@ -16,9 +16,6 @@ spec:
           image: DOCKER_IMAGE
           ports:
             - containerPort: 8080
-          envFrom:
-            - configMapRef:
-                name: app-notificacoes-cm
           resources:
             requests:
               cpu: 200m
