@@ -15,7 +15,7 @@ public class EmailService {
     Mailer mailer;
 
     public void sendEmail(String email, String videoId) {
-        String body = String.format("Your video (ID: %s) has been processed successfully!", videoId);
+        String body = String.format("Erro no processamento do vídeo (ID: %s) , tente novamente.", videoId);
         try {
             LOG.debug("Attempting to send email to " + email);
             mailer.send(Mail.withText(email, "FiapX Video Notification", body));
