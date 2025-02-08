@@ -36,21 +36,24 @@ public class EmailServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
+    // BDD
+    // Feature: Envio de email com sucesso
+    // Cenário: Envio de email com sucesso
     @Test
-    void sendEmail_success() {
-        // Act
-        emailService.sendEmail(email, videoId);
-
-        // Assert
+    void sendEmailSucesso() {
+       // Dado email = "test@example.com" válido
+       // E dado String videoId = "e1ea5f84-be64-4589-a6bc-5894fd0018db" 
+       // Quando chamar método sendEmail com endereço de email e ID de video válidoas
+       emailService.sendEmail(email, videoId);
+       
+        // Então, o método deve ser executado com sucesso
         verify(mailer, times(1)).send(any(Mail.class));
     }
 
     @Test
-    void sendEmail_failure() {
-        // Arrange
+    void sendEmailFalha() {
         doThrow(new RuntimeException("Mail server error")).when(mailer).send(any(Mail.class));
 
-        // Act & Assert
         RuntimeException thrown = org.junit.jupiter.api.Assertions.assertThrows(
                 RuntimeException.class, 
                 () -> emailService.sendEmail(email, videoId)
